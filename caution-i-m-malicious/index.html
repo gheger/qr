@@ -5,84 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Security Awareness — Trapped!</title>
   <style>
-    :root {
-      --bg: #ffffff;
-      --card: #f9f9f9;
-      --text: #222222;
-      --muted: #555555;
-      --accent: #E30613;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100dvh;
-      display: grid;
-      place-items: center;
-      background: var(--bg);
-      color: #fff;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    .card {
-      width: min(680px, 92vw);
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.02);
-    }
-    h1 {
-      font-size: clamp(28px, 3.2vw, 38px);
-      margin: 0 0 8px;
-      letter-spacing: 0.2px;
-    }
-    .sub {
-      color: var(--muted);
-      margin: 0 0 22px;
-      font-size: clamp(14px, 1.6vw, 16px);
-    }
-    .block {
-      background: rgba(255,255,255,0.03);
-      border: 1px dashed rgba(255,255,255,0.14);
-      padding: 16px;
-      border-radius: 16px;
-      margin: 16px 0 0;
-      line-height: 1.55;
-    }
-    .bad {
-      color: #ff9aa2;
-      font-weight: 600;
-    }
-    .good {
-      color: var(--accent);
-      font-weight: 600;
-    }
-    .footer {
-      margin-top: 22px;
-      font-size: 13px;
-      color: #cbd5ff;
-      opacity: 0.8;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.95em;
-      color: #c8d8ff;
-    }
-  </style>
+  :root {
+    --bg: #ffffff;
+    --card: #f9f9f9;
+    --text: #222222;
+    --muted: #555555;
+    --accent: #E30613;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  }
+  .card {
+    width: min(680px, 92vw);
+    background: var(--card);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.02);
+  }
+  h1 {
+    font-size: clamp(28px, 3.2vw, 38px);
+    margin: 0 0 8px;
+    letter-spacing: 0.2px;
+  }
+  .sub {
+    color: var(--muted);
+    margin: 0 0 22px;
+    font-size: clamp(14px, 1.6vw, 16px);
+  }
+  .block {
+    background: rgba(0,0,0,0.02);
+    border: 1px dashed rgba(0,0,0,0.14);
+    padding: 16px;
+    border-radius: 16px;
+    margin: 16px 0 0;
+    line-height: 1.55;
+  }
+  .bad {
+    color: #ff4d4d;
+    font-weight: 600;
+  }
+  .good {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .footer {
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    opacity: 0.8;
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95em;
+    color: var(--accent);
+  }
+</style>
+
 </head>
 <body>
   <main class="card" role="main" aria-labelledby="title">
-    <h1 id="title">Oh no… you have been trapped :-(</h1>
-    <p class="sub">This was a <span class="good">friendly</span> security awareness exercise.</p>
+    <h1 id="title">You scanned me, you cheeky!</h1>
+    <p class="sub">This was a bad idea. However, this was a <span class="good">friendly</span> security awareness exercise.</p>
     <div class="block">
       <p>You scanned a QR code that contained <code>caution-i-m-malicious</code> in the URL:</p>
       <p><code>https://example.org/caution-i-m-malicious/</code></p>
@@ -93,11 +94,11 @@
       <ul>
         <li>Be skeptical of QR codes in public places or unsolicited messages.</li>
         <li>Preview the URL (most camera apps show it) and look for misspellings or odd domains.</li>
-        <li>When in doubt, open the site manually or contact IT/SecOps.</li>
+        <li>When in doubt, contact SeQ.</li>
       </ul>
     </div>
     <p class="footer">No data was collected. This page is harmless and for training only.</p>
-    <a class="button" href="https://www.cisa.gov/news-events/news/think-before-you-scan-qr-codes" target="_blank" rel="noopener">Learn about QR threats</a>
+    <a class="button" href="https://www.ncsc.admin.ch/ncsc/en/home/infos-fuer/infos-private/aktuelle-themen/qr-code-anwendungen-und-risiken.html" target="_blank" rel="noopener">Learn about QR threats</a>
   </main>
 </body>
 </html>
